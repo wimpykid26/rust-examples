@@ -39,3 +39,20 @@ pub fn loop_return() {
     };
     println!("Result is {}", result);
 }
+
+pub fn for_in_range() {
+    for n in 1..200 {
+        //Use 1..=200 for right range inclusive
+        println!("{}", n);
+    }
+}
+
+pub fn for_iterator() {
+    let names = vec!["John", "Mayer", "Amit"];
+    for name in names.iter() {
+        match name {
+            &"John" => println!("Hi My name is {}", name),
+            _ => println!("Some other name"),
+        }
+    }
+}
