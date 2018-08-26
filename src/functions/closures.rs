@@ -1,5 +1,20 @@
 use std::mem;
 
+//Apply is a function which takes a closure and calls it using Fn
+pub fn apply<F>(mut f: F)
+where
+    F: FnMut(),
+{
+    f();
+}
+pub fn type_anonymity() {
+    let x = 5;
+    let print = || {
+        println!("{}", x);
+    };
+    apply(print);
+}
+
 pub fn capturing() {
     let color = "green";
 
