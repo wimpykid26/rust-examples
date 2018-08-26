@@ -47,6 +47,16 @@ pub fn ref_match() {
 
     println!("{:?}", x);
 }
+
+pub fn match_guard() {
+    let value = (2, -2);
+    match value {
+        (x, y) if x == y => println!("equal"),
+        (x, y) if x + y == 0 => println!("opposite"),
+        _ => println!("No direct correlation"),
+    }
+}
+
 pub fn basic_match() {
     let number = 13;
 
