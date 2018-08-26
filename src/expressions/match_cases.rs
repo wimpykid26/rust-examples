@@ -48,6 +48,18 @@ pub fn ref_match() {
     println!("{:?}", x);
 }
 
+fn fun() -> u32 {
+    4
+}
+
+pub fn binding_match_variable() {
+    match fun() {
+        0 => println!("0"),
+        n @ 1...12 => println!("Age is {}", n),
+        n => println!("I am old {}", n),
+    }
+}
+
 pub fn match_guard() {
     let value = (2, -2);
     match value {
