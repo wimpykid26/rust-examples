@@ -1,5 +1,5 @@
 pub mod expressions;
-
+pub mod functions;
 pub fn run_example() {
-    expressions::match_cases::binding_match_variable();
+    functions::simple_function::simple();
 }
