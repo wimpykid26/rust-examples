@@ -15,6 +15,17 @@ pub fn type_anonymity() {
     apply(print);
 }
 
+//This function returns a closure of type Fn
+pub fn return_fn() -> Box<Fn()> {
+    let text = "Fn".to_owned();
+    Box::new(move || println!("The text is {}", text))
+}
+
+pub fn return_closure() {
+    let returned_closure = return_fn();
+    returned_closure();
+}
+
 pub fn capturing() {
     let color = "green";
 
